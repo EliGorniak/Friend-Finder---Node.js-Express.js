@@ -1,0 +1,29 @@
+body {
+  background: url(https://images.pexels.com/photos/164531/pexels-photo-164531.jpeg?cs=srgb&dl=black-and-white-connect-hand-164531.jpg&fm=jpg)
+    no-repeat;
+  background-size: cover;
+  width: 90%;
+  margin: auto;
+}
+
+h1 {
+  font-family: "Mansalva", cursive;
+  color: rgb(248, 209, 37);
+  text-shadow: 5px 5px 5px rgb(34, 34, 34);
+  font-size: 50px;
+}
+
+h2 {
+  font-family: "Lobster Two", cursive;
+  color: rgb(46, 46, 45);
+  text-shadow: 5px 5px 5px rgb(153, 152, 152);
+}
+
+footer {
+  margin: auto;
+  width: 90%;
+  height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}

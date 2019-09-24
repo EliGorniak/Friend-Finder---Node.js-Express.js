@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Finder</title>
+
+    <!-- Links for CSS Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Links for CSS Default -->
+    <link rel="stylesheet" href="../public/surveystyle.css" />
+
+    <!-- Links for Custom Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lobster+Two|Mansalva|Pacifico|Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">
+        Friend Finder
+      </h1>
+    </div>
+    <div class="container">
+      <!-- table for input datas-->
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <div class="form-row">
+                <div class="form-group col-md-7">
+                  <label for="name">Your Name (Required)</label>
+                  <input type="text" class="form-control" id="userName" />
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="photo">Link to Photo Image (Required)</label>
+                  <input type="text" class="form-control" id="userPhoto" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- input form  -->
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <h5 class="card-header">Questions</h5>
+            <div class="card-body">
+              <h6>
+                <strong>Question 1: </strong>You like to travel and visit wild
+                and unexplored places.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 2: </strong>You prefer calm and relaxing music
+                instead of rock'nd roll.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 3: </strong>You can handle calmly in pressure
+                situations.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 4: </strong>You prefer to be alone rather with
+                a lot of people aside.
+              </h6>
+
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 5: </strong>You are a very good listener when a
+                friend share with you their problems.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 6: </strong>If someone invite you to watch some
+                game on TV, you'll probably say yes because you like to be with
+                people.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 7: </strong>You are always looking for new
+                technologies because you are addicted on innovation.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 8: </strong>Healthy food and drink is always
+                your first option.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 9: </strong>You like to spend some time doing
+                absolutely nothing.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+
+              <h6>
+                <strong>Question 10: </strong>You easily feel upset with the
+                suffering of people that you don't know very well.
+              </h6>
+              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Desagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+              </select>
+            </div>
+            <div class="text-center">
+              <a href="../public/survey.html"
+                ><button class="btn btn-warning">
+                  <span class="fa fa-check-square"></span> Submit to see the
+                  result
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <a href="/api/friends"
+        ><button class="btn btn-outline-secondary">
+          <span class="fa fa-sitemap"></span> API Friends List
+        </button></a
+      >
+      <a href="https://github.com/EliGorniak/Friend-Finder---Node.js-Express.js"
+        ><button class="btn btn-outline-secondary">
+          <span class="fa fa-github"></span> Code in Github
+        </button></a
+      >
+    </footer>
+  </body>
+</html>
