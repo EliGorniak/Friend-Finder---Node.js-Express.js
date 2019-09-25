@@ -1,12 +1,12 @@
 // Variables to import the modules from node_modules:
-var express = require("express");
-var path = require("path");
+const express = require("express");
+const path = require("path");
 
 // Variable to set up Express server app:
-var app = express();
+const app = express();
 
 // Variable to set up the PORT for the Express server:
-var PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 4000;
 
 // Sets up the Express app to handle data parsing (middleware):
 app.use(express.urlencoded({ extended: true }));
@@ -20,5 +20,5 @@ require("./routing/htmlRoutes")(app);
 
 // Starts the server to begin listening (using arrow function):
 app.listen(PORT, () => {
-  console.log("App listening on PORT " + PORT);
+  console.log("Connected at localhost:" + PORT);
 });

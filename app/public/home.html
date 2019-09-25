@@ -13,17 +13,55 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- Links for CSS Default -->
-    <link rel="stylesheet" href="../public/style.css" />
 
     <!-- Links for Custom Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Lobster+Two|Mansalva|Pacifico|Patrick+Hand&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
+
+    <!-- Link for Favicon -->
+    <link
+      rel="shortcut icon"
+      href="../images/friends.png"
+      type="image/x-icon"
+    />
   </head>
+  <style>
+    body {
+      background: url(https://images.pexels.com/photos/164531/pexels-photo-164531.jpeg?cs=srgb&dl=black-and-white-connect-hand-164531.jpg&fm=jpg)
+        no-repeat;
+      background-size: cover;
+      width: 90%;
+      margin: auto;
+    }
+    .jumbotron {
+      background: transparent;
+      margin-top: 5px;
+    }
+
+    h1 {
+      font-family: "Mansalva", cursive;
+      color: rgb(248, 209, 37);
+      text-shadow: 5px 5px 5px rgb(34, 34, 34);
+      font-size: 80px;
+    }
+
+    h2 {
+      font-family: "Lobster Two", cursive;
+      color: rgb(46, 46, 45);
+      text-shadow: 5px 5px 5px rgb(153, 152, 152);
+    }
+
+    footer {
+      margin: auto;
+      width: 90%;
+      height: 50px;
+      text-align: center;
+    }
+  </style>
   <body>
+    <!-- Section for the body content and link(button) for the survey page  -->
     <div class="container">
       <div class="jumbotron ">
         <h1 class="text-center">
@@ -39,23 +77,24 @@
         <hr />
 
         <div class="text-center">
-          <a href="../public/survey.html"
-            ><button class="btn btn-warning">
+          <a href="survey.html"
+            ><button type="button" class="btn btn-warning">
               <span class="fa fa-list-alt"></span> Answer the survey
             </button></a
           >
         </div>
       </div>
 
+      <!-- Section for footer and links for the API Friends and code on Github  -->
       <footer class="footer">
-        <a href="/api/tables"
-          ><button class="btn btn-outline-secondary">
+        <a href="/api/friends"
+          ><button class="btn btn-secondary">
             <span class="fa fa-sitemap"></span> API Friends List
           </button></a
         >
         <a
           href="https://github.com/EliGorniak/Friend-Finder---Node.js-Express.js"
-          ><button class="btn btn-outline-secondary">
+          ><button class="btn btn-secondary">
             <span class="fa fa-github"></span> Code in Github
           </button></a
         >

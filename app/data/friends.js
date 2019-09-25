@@ -1,4 +1,4 @@
-let friends = [
+let friendsArray = [
   {
     name: "Angelina Jolie",
     photo:
@@ -26,4 +26,4 @@ let friends = [
 ];
 
 // This module will exports all the data in the friends array:
-module.exports = friends;
+module.exports = friendsArray;

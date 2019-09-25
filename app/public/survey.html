@@ -2,27 +2,75 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Friend Finder</title>
+    <title>Friend Finder | Survey</title>
 
     <!-- Links for CSS Bootstrap -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
     />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- Links for CSS Default -->
-    <link rel="stylesheet" href="../public/surveystyle.css" />
+    <!-- Links for JS Bootstrap -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Links for Custom Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Lobster+Two|Mansalva|Pacifico|Patrick+Hand&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <!-- Link for Favicon -->
+    <link rel="shortcut icon" href="../images/survey.png" type="image/x-icon" />
   </head>
+  <style>
+    body {
+      background: url(https://images.pexels.com/photos/164531/pexels-photo-164531.jpeg?cs=srgb&dl=black-and-white-connect-hand-164531.jpg&fm=jpg)
+        no-repeat;
+      background-size: cover;
+      width: 90%;
+      margin: auto;
+    }
+
+    h1 {
+      font-family: "Mansalva", cursive;
+      color: rgb(248, 209, 37);
+      text-shadow: 5px 5px 5px rgb(34, 34, 34);
+      font-size: 50px;
+    }
+
+    h2 {
+      font-family: "Lobster Two", cursive;
+      color: rgb(46, 46, 45);
+      text-shadow: 5px 5px 5px rgb(153, 152, 152);
+    }
+
+    footer {
+      margin: auto;
+      width: 90%;
+      height: 40px;
+      text-align: center;
+    }
+
+    .match-img {
+      width: 50%;
+      height: auto;
+    }
+  </style>
   <body>
     <div class="container">
       <h1 class="text-center">
@@ -30,7 +78,7 @@
       </h1>
     </div>
     <div class="container">
-      <!-- table for input datas-->
+      <!-- table for user input datas-->
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -38,11 +86,11 @@
               <div class="form-row">
                 <div class="form-group col-md-7">
                   <label for="name">Your Name (Required)</label>
-                  <input type="text" class="form-control" id="userName" />
+                  <input type="text" class="form-control" id="name" />
                 </div>
                 <div class="form-group col-md-5">
                   <label for="photo">Link to Photo Image (Required)</label>
-                  <input type="text" class="form-control" id="userPhoto" />
+                  <input type="text" class="form-control" id="photo" />
                 </div>
               </div>
             </div>
@@ -50,7 +98,7 @@
         </div>
       </div>
 
-      <!-- input form  -->
+      <!-- table for user input survey -->
       <div class="row">
         <div class="col-12">
           <div class="card">
@@ -60,7 +108,7 @@
                 <strong>Question 1: </strong>You like to travel and visit wild
                 and unexplored places.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q1">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -73,7 +121,7 @@
                 <strong>Question 2: </strong>You prefer calm and relaxing music
                 instead of rock'nd roll.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q2">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -86,7 +134,7 @@
                 <strong>Question 3: </strong>You can handle calmly in pressure
                 situations.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q3">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -100,7 +148,7 @@
                 a lot of people aside.
               </h6>
 
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q4">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -113,7 +161,7 @@
                 <strong>Question 5: </strong>You are a very good listener when a
                 friend share with you their problems.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q5">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -127,7 +175,7 @@
                 game on TV, you'll probably say yes because you like to be with
                 people.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q6">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -140,7 +188,7 @@
                 <strong>Question 7: </strong>You are always looking for new
                 technologies because you are addicted on innovation.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q7">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -153,7 +201,7 @@
                 <strong>Question 8: </strong>Healthy food and drink is always
                 your first option.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q8">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -166,7 +214,7 @@
                 <strong>Question 9: </strong>You like to spend some time doing
                 absolutely nothing.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q9">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -179,7 +227,7 @@
                 <strong>Question 10: </strong>You easily feel upset with the
                 suffering of people that you don't know very well.
               </h6>
-              <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <select class="chosen-select" id="q10">
                 <option selected>Choose...</option>
                 <option value="1">1 (Strongly Desagree)</option>
                 <option value="2">2</option>
@@ -188,29 +236,141 @@
                 <option value="5">5 (Strongly Agree)</option>
               </select>
             </div>
+            <!-- Submit button to process the survey -->
             <div class="text-center">
-              <a href="../public/survey.html"
-                ><button class="btn btn-warning">
-                  <span class="fa fa-check-square"></span> Submit to see the
-                  result
-                </button></a
-              >
+              <button type="submit" class="btn btn-warning" id="checkSurvey">
+                <span class="fa fa-check-square"></span> Submit to see the
+                result
+              </button>
+              <br />
+              <br />
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Section for footer and links for the API Friends and code on Github  -->
     <footer class="footer">
       <a href="/api/friends"
-        ><button class="btn btn-outline-secondary">
+        ><button class="btn btn-secondary">
           <span class="fa fa-sitemap"></span> API Friends List
         </button></a
       >
       <a href="https://github.com/EliGorniak/Friend-Finder---Node.js-Express.js"
-        ><button class="btn btn-outline-secondary">
+        ><button class="btn btn-secondary">
           <span class="fa fa-github"></span> Code in Github
         </button></a
       >
     </footer>
+    <!-- Section for the Modal Result -->
+    <div id="results-modal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h2 class="modal-title">
+              <strong>Here is your best match!</strong>
+            </h2>
+          </div>
+          <div class="modal-body">
+            <h2 id="match-name"></h2>
+            <img id="match-img" class="match-img" src="" alt="No image found" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      // By clicking Submit button, runs function validateForm():
+      document
+        .getElementById("checkSurvey")
+        .addEventListener("click", function(event) {
+          //alert("working");
+          event.preventDefault();
+
+          // Form validation:
+          function validateForm() {
+            var isValid = true;
+            // Validate the user name and photo fields:
+            // Array.from(document.getElementsByClassName("form-control")).forEach(
+            //   function(value) {
+            //     alert(isValid);
+            //     if (this.value === "") {
+            //       isValid = false;
+            //     }
+            //   }
+            // );
+
+            var els = document.getElementsByClassName("form-control");
+            // Array.prototype.forEach.call(els),
+            //   function(el) {
+            //     if (el.value === "") {
+            //       isValid = false;
+            //     }
+            //   };
+            // alert(isValid);
+
+            // if (isValid) {
+            //   // Validate the user survey inputs:
+            //   Array.from(
+            //     document.getElementsByClassName("chosen-select")
+            //   ).forEach(function() {
+            //     alert(isValid);
+            //     if (this.value === "") {
+            //       isValid = false;
+            //     }
+            //   });
+            // }
+
+            return isValid;
+          }
+
+          // If all fields in survey are answered:
+          if (validateForm()) {
+            // Variable that create the user data:
+            var userData = {
+              name: document.getElementById("name").value,
+              photo: document.getElementById("photo").value,
+              scores: [
+                document.getElementById("q1").value,
+                document.getElementById("q2").value,
+                document.getElementById("q3").value,
+                document.getElementById("q4").value,
+                document.getElementById("q5").value,
+                document.getElementById("q6").value,
+                document.getElementById("q7").value,
+                document.getElementById("q8").value,
+                document.getElementById("q9").value,
+                document.getElementById("q10").value
+              ]
+            };
+
+            console.log(JSON.stringify(userData));
+            // AJAX post the data to the friends API.
+            $.post("/api/friends", userData, function(data) {
+              // Grab the result from the AJAX post so that the mymatch's name and photo are displayed.
+              document.getElementById("match-name").innerText = data.name;
+              document
+                .getElementById("match-img")
+                .setAttribute("src", data.photo);
+
+              // Show the modal with the best match
+              console.log(data.name);
+              console.log(data.photo);
+              $("#results-modal").modal("toggle");
+            });
+          } else {
+            alert("Please fill out all fields before submitting!");
+          }
+        });
+    </script>
   </body>
 </html>
